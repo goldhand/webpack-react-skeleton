@@ -26,8 +26,19 @@ export default () => {
       loaders: [
         {
           test: /\.js$/,
-          loader: 'babel-loader?presets[]=es2015',
-          exclude: /node_modules/
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          query: {
+            presets: ['es2015', 'react']
+          }
+        },
+        {
+          test: /\.jsx$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          query: {
+            presets: ['es2015', 'react']
+          }
         },
         {
           test: /\.js$/,

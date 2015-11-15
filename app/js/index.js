@@ -1,6 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const helloWorld = () => {
-  document.write('Hello World');
-};
+import Hello from './hello';
+import World from './world';
 
-helloWorld();
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Hello />
+        <World />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
